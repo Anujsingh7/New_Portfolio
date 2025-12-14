@@ -233,8 +233,8 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🤝 Connect With Me
 
 - **GitHub**: [Anujsingh7](https://github.com/Anujsingh7)
-- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
-- **Email**: your.email@example.com
+- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/anuj-kumar-singh-92b599214/)
+- **Email**: anujkumarsingh7@gmail.com
 
 ---
 
