@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Next.js-16.0.1-black?style=for-the-badge&logo=next.js" alt="Next.js 16.0.1">
-  <img src="https://img.shields.io/badge/React-19.2.0-blue?style=for-the-badge&logo=react" alt="React 19.2.0">
+  <img src="https://img.shields.io/badge/Next.js-16.0.10-black?style=for-the-badge&logo=next.js" alt="Next.js 16.0.10">
+  <img src="https://img.shields.io/badge/React-19.2.3-blue?style=for-the-badge&logo=react" alt="React 19.2.3">
   <img src="https://img.shields.io/badge/Tailwind_CSS-4.x-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind CSS 4">
 </p>
 
@@ -51,8 +51,8 @@ This is my personal portfolio website built with cutting-edge technologies inclu
 
 | Technology | Version | Purpose |
 |------------|---------|---------|
-| **Next.js** | 16.0.1 | React framework with App Router |
-| **React** | 19.2.0 | UI component library |
+| **Next.js** | 16.0.10 | React framework with App Router |
+| **React** | 19.2.3 | UI component library |
 | **Tailwind CSS** | 4.x | Utility-first CSS framework |
 | **next-themes** | 0.4.6 | Dark/light theme management |
 | **Lottie** | Latest | Lightweight animations |
