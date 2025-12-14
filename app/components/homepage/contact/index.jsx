@@ -11,9 +11,9 @@ import ContactForm from './contact-form';
 
 function ContactSection() {
   return (
-    <div id="contact" className="my-12 lg:my-16 relative mt-24 text-white">
+    <div id="contact" className="my-12 lg:my-16 relative mt-24 text-gray-900 dark:text-gray-300">
       <div className="hidden lg:flex flex-col items-center absolute top-24 -right-8">
-        <span className="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-xl rounded-md">
+        <span className="bg-[#1a1443] w-fit text-gray-900 dark:text-white rotate-90 p-2 px-5 text-xl rounded-md">
           CONTACT
         </span>
         <span className="h-36 w-[2px] bg-[#1a1443]"></span>
@@ -55,30 +55,38 @@ function ContactSection() {
                 size={48}
               />
             </Link>
-            <Link target="_blank" href={personalData.linkedIn}>
-              <BiLogoLinkedin
-                className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
-                size={48}
-              />
-            </Link>
-            <Link target="_blank" href={personalData.twitter}>
-              <FaXTwitter
-                className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
-                size={48}
-              />
-            </Link>
-            <Link target="_blank" href={personalData.stackOverflow}>
-              <FaStackOverflow
-                className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
-                size={48}
-              />
-            </Link>
-            <Link target="_blank" href={personalData.facebook}>
-              <FaFacebook
-                className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
-                size={48}
-              />
-            </Link>
+            {personalData.linkedIn && (
+              <Link target="_blank" href={personalData.linkedIn}>
+                <BiLogoLinkedin
+                  className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
+                  size={48}
+                />
+              </Link>
+            )}
+            {personalData.twitter && (
+              <Link target="_blank" href={personalData.twitter}>
+                <FaXTwitter
+                  className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
+                  size={48}
+                />
+              </Link>
+            )}
+            {personalData.stackOverflow && (
+              <Link target="_blank" href={personalData.stackOverflow}>
+                <FaStackOverflow
+                  className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
+                  size={48}
+                />
+              </Link>
+            )}
+            {personalData.facebook && (
+              <Link target="_blank" href={personalData.facebook}>
+                <FaFacebook
+                  className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
+                  size={48}
+                />
+              </Link>
+            )}
           </div>
         </div>
       </div>

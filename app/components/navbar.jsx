@@ -1,44 +1,184 @@
-// @flow strict
-import Link from "next/link";
+'use client';
 
+import Link from "next/link";
+import { useState, useEffect, useRef } from "react";
+import { IoClose, IoMenu } from "react-icons/io5";
+import ThemeToggle from "./theme-toggle";
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navRef = useRef(null);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target) && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMenuOpen]);
+
   return (
-    <nav className="bg-transparent">
+    <nav ref={navRef} className="bg-transparent sticky top-0 z-[9999] backdrop-blur-md bg-white/80 dark:bg-[#0d1224]/80">
       <div className="flex items-center justify-between py-5">
+        {/* Logo */}
         <div className="flex flex-shrink-0 items-center">
           <Link
             href="/"
-            className=" text-[#16f2b3] text-3xl font-bold">
-            ABU SAID
+            className="text-[#16f2b3] text-3xl font-bold"
+            onClick={closeMenu}
+          >
+            Anuj Singh
           </Link>
         </div>
 
-        <ul className="mt-4 flex h-screen max-h-0 w-full flex-col items-start text-sm opacity-0 md:mt-0 md:h-auto md:max-h-screen md:w-auto md:flex-row md:space-x-1 md:border-0 md:opacity-100" id="navbar-default">
+        {/* Desktop Navigation */}
+        <ul className="hidden md:flex md:items-center md:space-x-1">
           <li>
             <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#about">
-              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">ABOUT</div>
+              <div className="text-sm text-gray-900 dark:text-gray-300 transition-colors duration-300 hover:text-pink-600">ABOUT</div>
             </Link>
           </li>
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#experience"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">EXPERIENCE</div></Link>
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#experience">
+              <div className="text-sm text-gray-900 dark:text-gray-300 transition-colors duration-300 hover:text-pink-600">EXPERIENCE</div>
+            </Link>
           </li>
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#skills"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">SKILLS</div></Link>
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#skills">
+              <div className="text-sm text-gray-900 dark:text-gray-300 transition-colors duration-300 hover:text-pink-600">SKILLS</div>
+            </Link>
           </li>
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#education"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">EDUCATION</div></Link>
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#education">
+              <div className="text-sm text-gray-900 dark:text-gray-300 transition-colors duration-300 hover:text-pink-600">EDUCATION</div>
+            </Link>
           </li>
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/blog"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">BLOGS</div></Link>
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/blog">
+              <div className="text-sm text-gray-900 dark:text-gray-300 transition-colors duration-300 hover:text-pink-600">BLOGS</div>
+            </Link>
           </li>
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#projects"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">PROJECTS</div></Link>
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#projects">
+              <div className="text-sm text-gray-900 dark:text-gray-300 transition-colors duration-300 hover:text-pink-600">PROJECTS</div>
+            </Link>
+          </li>
+          <li className="flex items-center">
+            <ThemeToggle />
+          </li>
+        </ul>
+
+        {/* Mobile Menu Button */}
+        <div className="flex items-center md:hidden">
+          <button
+            onClick={toggleMenu}
+            className="inline-flex items-center justify-center p-2 rounded-md text-gray-900 dark:text-gray-300 hover:text-pink-600 focus:outline-none transition-colors duration-300"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? (
+              <IoClose className="h-6 w-6" />
+            ) : (
+              <IoMenu className="h-6 w-6" />
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen
+          ? 'max-h-screen opacity-100'
+          : 'max-h-0 opacity-0 overflow-hidden'
+          }`}
+      >
+        <ul className="flex flex-col space-y-1 pb-4">
+          <li>
+            <Link
+              className="block px-4 py-3 no-underline outline-none hover:no-underline"
+              href="/#about"
+              onClick={closeMenu}
+            >
+              <div className="text-base text-gray-900 dark:text-gray-300 transition-colors duration-300 hover:text-pink-600">
+                ABOUT
+              </div>
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="block px-4 py-3 no-underline outline-none hover:no-underline"
+              href="/#experience"
+              onClick={closeMenu}
+            >
+              <div className="text-base text-gray-900 dark:text-gray-300 transition-colors duration-300 hover:text-pink-600">
+                EXPERIENCE
+              </div>
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="block px-4 py-3 no-underline outline-none hover:no-underline"
+              href="/#skills"
+              onClick={closeMenu}
+            >
+              <div className="text-base text-gray-900 dark:text-gray-300 transition-colors duration-300 hover:text-pink-600">
+                SKILLS
+              </div>
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="block px-4 py-3 no-underline outline-none hover:no-underline"
+              href="/#education"
+              onClick={closeMenu}
+            >
+              <div className="text-base text-gray-900 dark:text-gray-300 transition-colors duration-300 hover:text-pink-600">
+                EDUCATION
+              </div>
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="block px-4 py-3 no-underline outline-none hover:no-underline"
+              href="/blog"
+              onClick={closeMenu}
+            >
+              <div className="text-base text-gray-900 dark:text-gray-300 transition-colors duration-300 hover:text-pink-600">
+                BLOGS
+              </div>
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="block px-4 py-3 no-underline outline-none hover:no-underline"
+              href="/#projects"
+              onClick={closeMenu}
+            >
+              <div className="text-base text-gray-900 dark:text-gray-300 transition-colors duration-300 hover:text-pink-600">
+                PROJECTS
+              </div>
+            </Link>
+          </li>
+          <li className="px-4 py-3">
+            <ThemeToggle />
           </li>
         </ul>
       </div>
     </nav>
   );
-};
+}
 
 export default Navbar;

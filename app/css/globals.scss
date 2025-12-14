@@ -1,18 +1,27 @@
 @use "tailwindcss";
 
 :root {
-  --foreground-rgb: rgb(211, 216, 232);
+  --foreground-rgb: 31, 41, 55;
+  --background-color: #f8f9fa;
+  --card-background: #ffffff;
+  --border-color: #e5e7eb;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-  }
+.dark {
+  --foreground-rgb: 211, 216, 232;
+  --background-color: #0d1224;
+  --card-background: #1a1443;
+  --border-color: #25213b;
+  --text-primary: #ffffff;
+  --text-secondary: #d3d8e8;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background-color: #0d1224;
+  color: var(--text-primary);
+  background-color: var(--background-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #sticky-card-1 {

@@ -21,7 +21,7 @@ function Experience() {
       <div className="flex justify-center my-5 lg:py-8">
         <div className="flex  items-center">
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-          <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
+          <span className="bg-[#1a1443] w-fit text-gray-900 dark:text-white p-2 px-5 text-xl rounded-md">
             Experiences
           </span>
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
@@ -59,10 +59,10 @@ function Experience() {
                           <BsPersonWorkspace size={36} />
                         </div>
                         <div>
-                          <p className="text-base sm:text-xl mb-2 font-medium uppercase">
+                          <p className="text-base sm:text-xl mb-2 font-medium uppercase text-gray-900 dark:text-gray-300">
                             {experience.title}
                           </p>
-                          <p className="text-sm sm:text-base">
+                          <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
                             {experience.company}
                           </p>
                         </div>
