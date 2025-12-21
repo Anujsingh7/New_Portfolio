@@ -20,11 +20,11 @@ function Experience() {
 
       <div className="flex justify-center my-5 lg:py-8">
         <div className="flex  items-center">
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-          <span className="bg-[#1a1443] w-fit text-gray-900 dark:text-white p-2 px-5 text-xl rounded-md">
+          <span className="w-24 h-[2px] bg-theme-card"></span>
+          <span className="bg-theme-card w-fit text-theme-text p-2 px-5 text-xl rounded-md">
             Experiences
           </span>
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+          <span className="w-24 h-[2px] bg-theme-card"></span>
         </div>
       </div>
 
@@ -50,7 +50,7 @@ function Experience() {
                         className="absolute bottom-0 opacity-80"
                       />
                       <div className="flex justify-center">
-                        <p className="text-xs sm:text-sm text-[#16f2b3]">
+                        <p className="text-xs sm:text-sm text-theme-text">
                           {experience.duration}
                         </p>
                       </div>
@@ -59,10 +59,10 @@ function Experience() {
                           <BsPersonWorkspace size={36} />
                         </div>
                         <div>
-                          <p className="text-base sm:text-xl mb-2 font-medium uppercase text-gray-900 dark:text-gray-300">
+                          <p className="text-base sm:text-xl mb-2 font-medium uppercase text-theme-text">
                             {experience.title}
                           </p>
-                          <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                          <p className="text-sm sm:text-base text-theme-text-secondary">
                             {experience.company}
                           </p>
                         </div>

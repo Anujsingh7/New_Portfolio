@@ -8,6 +8,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'theme-bg': 'var(--background-color)',
+        'theme-card': 'var(--card-background)',
+        'theme-border': 'var(--border-color)',
+        'theme-text': 'var(--text-primary)',
+        'theme-text-secondary': 'var(--text-secondary)',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -24,11 +31,8 @@ module.exports = {
           "3xl": "5rem",
         },
       },
-
-      extend: {
-        screens: {
-          "4k": "1980px",
-        },
+      screens: {
+        "4k": "1980px",
       },
     },
   },

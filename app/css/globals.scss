@@ -5,7 +5,7 @@
   --background-color: #f8f9fa;
   --card-background: #ffffff;
   --border-color: #e5e7eb;
-  --text-primary: #1f2937;
+  --text-primary: #1f3722;
   --text-secondary: #6b7280;
 }
 
@@ -43,4 +43,5 @@ body {
 .sticky-card {
   // padding-top: calc(var(--index) * 2.5rem);
   top: calc(var(--index) * 4rem);
+  background-color: var(--background-color);
 }

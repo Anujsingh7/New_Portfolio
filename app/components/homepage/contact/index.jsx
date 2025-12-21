@@ -11,12 +11,12 @@ import ContactForm from './contact-form';
 
 function ContactSection() {
   return (
-    <div id="contact" className="my-12 lg:my-16 relative mt-24 text-gray-900 dark:text-gray-300">
+    <div id="contact" className="my-12 lg:my-16 relative mt-24 text-theme-text">
       <div className="hidden lg:flex flex-col items-center absolute top-24 -right-8">
-        <span className="bg-[#1a1443] w-fit text-gray-900 dark:text-white rotate-90 p-2 px-5 text-xl rounded-md">
+        <span className="bg-theme-card w-fit text-theme-text rotate-90 p-2 px-5 text-xl rounded-md">
           CONTACT
         </span>
-        <span className="h-36 w-[2px] bg-[#1a1443]"></span>
+        <span className="h-36 w-[2px] bg-theme-card"></span>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         <ContactForm />

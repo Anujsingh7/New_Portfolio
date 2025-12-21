@@ -24,11 +24,11 @@ function Education() {
 
       <div className="flex justify-center my-5 lg:py-8">
         <div className="flex  items-center">
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-          <span className="bg-[#1a1443] w-fit text-gray-900 dark:text-white p-2 px-5 text-xl rounded-md">
-            Educations
+          <span className="w-24 h-[2px] bg-theme-card"></span>
+          <span className="bg-theme-card w-fit text-theme-text p-2 px-5 text-xl rounded-md">
+            Education
           </span>
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+          <span className="w-24 h-[2px] bg-theme-card"></span>
         </div>
       </div>
 
@@ -45,7 +45,7 @@ function Education() {
               {
                 educations.map(education => (
                   <GlowCard key={education.id} identifier={`education-${education.id}`}>
-                    <div className="p-3 relative text-gray-900 dark:text-gray-300">
+                    <div className="p-3 relative text-theme-text">
                       <Image
                         src="/blur-23.svg"
                         alt="Hero"
@@ -54,7 +54,7 @@ function Education() {
                         className="absolute bottom-0 opacity-80"
                       />
                       <div className="flex justify-center">
-                        <p className="text-xs sm:text-sm text-[#16f2b3]">
+                        <p className="text-xs sm:text-sm text-theme-text">
                           {education.duration}
                         </p>
                       </div>

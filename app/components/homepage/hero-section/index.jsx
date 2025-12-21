@@ -22,7 +22,7 @@ function HeroSection() {
 
       <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-8">
         <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
-          <h1 className="text-3xl font-bold leading-10 text-gray-900 dark:text-gray-300 md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
+          <h1 className="text-3xl font-bold leading-10 text-[#16f2b3] md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
             Hello, <br />
             This is {' '}
             <span className=" text-pink-500">{personalData.name}</span>
@@ -79,7 +79,7 @@ function HeroSection() {
 
           <div className="flex items-center gap-3">
             <Link href="#contact" className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-full transition-all duration-300 hover:from-pink-500 hover:to-violet-600">
-              <button className="px-3 text-xs md:px-8 py-3 md:py-4 bg-gray-800 dark:bg-[#0d1224] rounded-full border-none text-center md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-1 hover:gap-3">
+              <button className="px-3 text-xs md:px-8 py-3 md:py-4 bg-theme-card rounded-full border-none text-center md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-1 hover:gap-3">
                 <span>Contact me</span>
                 <RiContactsFill size={16} />
               </button>
@@ -93,7 +93,7 @@ function HeroSection() {
           </div>
 
         </div>
-        <div className="order-1 lg:order-2 dark:from-[#0d1224] dark:border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r dark:to-[#0a0d37]">
+        <div className="order-1 lg:order-2 relative rounded-lg border border-theme-border bg-theme-card">
           <div className="flex flex-row">
             <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
             <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
@@ -105,22 +105,22 @@ function HeroSection() {
               <div className="h-3 w-3 rounded-full bg-green-400"></div>
             </div>
           </div>
-          <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
+          <div className="overflow-hidden border-t-[2px] border-theme-border px-4 lg:px-8 py-4 lg:py-8">
             <code className="font-mono text-xs md:text-sm lg:text-base">
               <div className="blink">
                 <span className="mr-2 text-pink-500">const</span>
-                <span className="mr-2 text-gray-900 dark:text-gray-300">coder</span>
+                <span className="mr-2 text-theme-text">coder</span>
                 <span className="mr-2 text-pink-500">=</span>
                 <span className="text-gray-400">{'{'}</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-gray-900 dark:text-gray-300">name:</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-theme-text">name:</span>
                 <span className="text-gray-400">{`'`}</span>
                 <span className="text-amber-300">Anuj Kumar Singh</span>
                 <span className="text-gray-400">{`',`}</span>
               </div>
               <div className="ml-4 lg:ml-8 mr-2">
-                <span className="text-gray-900 dark:text-white">skills:</span>
+                <span className="text-theme-text">skills:</span>
                 <span className="text-gray-400">{`['`}</span>
                 <span className="text-amber-300">React</span>
                 <span className="text-gray-400">{"', '"}</span>
@@ -146,17 +146,17 @@ function HeroSection() {
                 <span className="text-gray-400">{"'],"}</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-gray-900 dark:text-gray-300">hardWorker:</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-theme-text">hardWorker:</span>
                 <span className="text-orange-400">true</span>
                 <span className="text-gray-400">,</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-gray-900 dark:text-gray-300">quickLearner:</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-theme-text">quickLearner:</span>
                 <span className="text-orange-400">true</span>
                 <span className="text-gray-400">,</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-gray-900 dark:text-gray-300">problemSolver:</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-theme-text">problemSolver:</span>
                 <span className="text-orange-400">true</span>
                 <span className="text-gray-400">,</span>
               </div>
@@ -171,17 +171,17 @@ function HeroSection() {
               </div>
               <div>
                 <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-gray-900 dark:text-gray-300">hardWorker</span>
+                <span className="mr-2 text-theme-text">hardWorker</span>
                 <span className="text-amber-300">&amp;&amp;</span>
               </div>
               <div>
                 <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-gray-900 dark:text-gray-300">problemSolver</span>
+                <span className="mr-2 text-theme-text">problemSolver</span>
                 <span className="text-amber-300">&amp;&amp;</span>
               </div>
               <div>
                 <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-gray-900 dark:text-gray-300">skills.length</span>
+                <span className="mr-2 text-theme-text">skills.length</span>
                 <span className="mr-2 text-amber-300">&gt;=</span>
                 <span className="text-orange-400">5</span>
               </div>

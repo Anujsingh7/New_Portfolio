@@ -18,11 +18,11 @@ function Skills() {
 
       <div className="flex justify-center my-5 lg:py-8">
         <div className="flex  items-center">
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-          <span className="bg-[#1a1443] w-fit text-gray-900 dark:text-white p-2 px-5 text-xl rounded-md">
+          <span className="w-24 h-[2px] bg-theme-card"></span>
+          <span className="bg-theme-card w-fit text-theme-text p-2 px-5 text-xl rounded-md">
             Skills
           </span>
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+          <span className="w-24 h-[2px] bg-theme-card"></span>
         </div>
       </div>
 
@@ -43,7 +43,7 @@ function Skills() {
             return (
               <div className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
                 key={id}>
-                <div className="h-full w-full rounded-lg border dark:border-[#1f223c] dark:bg-[#11152c] shadow-none shadow-gray-50 group-hover:border-violet-500 transition-all duration-500">
+                <div className="h-full w-full rounded-lg border border-theme-border bg-theme-card shadow-none shadow-gray-50 group-hover:border-violet-500 transition-all duration-500">
                   <div className="flex -translate-y-[1px] justify-center">
                     <div className="w-3/4">
                       <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-violet-500 to-transparent" />
@@ -59,7 +59,7 @@ function Skills() {
                         className="h-full w-auto rounded-lg"
                       />
                     </div>
-                    <p className="text-gray-900 dark:text-white text-sm sm:text-lg">
+                    <p className="text-theme-text text-sm sm:text-lg">
                       {skill}
                     </p>
                   </div>
