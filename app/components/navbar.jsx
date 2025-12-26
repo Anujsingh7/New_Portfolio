@@ -83,8 +83,9 @@ function Navbar() {
             </li>
           </ul>
 
-          {/* Mobile Menu Button */}
-          <div className="flex items-center md:hidden">
+          {/* Mobile Menu Button and Theme Toggle */}
+          <div className="flex items-center gap-3 md:hidden">
+            <ThemeToggle />
             <button
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-theme-text hover:text-pink-600 focus:outline-none transition-colors duration-300"
@@ -172,9 +173,6 @@ function Navbar() {
                   PROJECTS
                 </div>
               </Link>
-            </li>
-            <li className="px-4 py-3">
-              <ThemeToggle />
             </li>
           </ul>
         </div>
