@@ -6,12 +6,23 @@ import Image from "next/image";
 
 function AboutSection() {
   return (
-    <div id="about" className="my-12 lg:my-16 relative">
-      <div className="hidden lg:flex flex-col items-center absolute top-16 -right-8">
-        <span className="bg-theme-card w-fit text-theme-text rotate-90 p-2 px-5 text-xl rounded-md">
-          ABOUT ME
-        </span>
-        <span className="h-36 w-[2px] bg-theme-card"></span>
+    <div id="about" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
+      <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl opacity-20"></div>
+
+      <div className="flex justify-center -translate-y-[1px]">
+        <div className="w-3/4">
+          <div className="h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent w-full" />
+        </div>
+      </div>
+
+      <div className="flex justify-center my-5 lg:py-8">
+        <div className="flex items-center">
+          <span className="w-24 h-[2px] bg-theme-card"></span>
+          <span className="bg-theme-card w-fit text-theme-text p-2 px-5 text-xl rounded-md">
+            ABOUT ME
+          </span>
+          <span className="w-24 h-[2px] bg-theme-card"></span>
+        </div>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         <div className="order-2 lg:order-1">
@@ -29,7 +40,7 @@ function AboutSection() {
               width={320}
               height={320}
               alt="Anuj Singh"
-              className="w-full h-full transition-all duration-1000 grayscale hover:grayscale-0 hover:scale-110 cursor-pointer object-cover"
+              className="w-full h-full transition-all duration-1000 hover:scale-110 cursor-pointer object-cover"
             />
           </div>
         </div>

@@ -55,7 +55,7 @@ function Skills() {
           {/* Left Arrow */}
           <button
             onClick={() => handleManualScroll('left')}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-violet-500 hover:bg-violet-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-violet-500 hover:bg-violet-600 theme-text-accent p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
             aria-label="Scroll left"
           >
             <BsChevronLeft size={24} />
@@ -108,7 +108,7 @@ function Skills() {
           {/* Right Arrow */}
           <button
             onClick={() => handleManualScroll('right')}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-violet-500 hover:bg-violet-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-violet-500 hover:bg-violet-600 theme-text-accent p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
             aria-label="Scroll right"
           >
             <BsChevronRight size={24} />

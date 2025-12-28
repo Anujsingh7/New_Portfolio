@@ -6,6 +6,13 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    'text-syntax-keyword',
+    'text-syntax-string',
+    'text-syntax-boolean',
+    'text-syntax-property',
+    'text-syntax-special',
+  ],
   theme: {
     extend: {
       colors: {
@@ -14,6 +21,14 @@ module.exports = {
         'theme-border': 'var(--border-color)',
         'theme-text': 'var(--text-primary)',
         'theme-text-secondary': 'var(--text-secondary)',
+        'theme-text-accent': 'var(--text-accent)',
+        'theme-text-muted': 'var(--text-muted)',
+        'theme-text-icon': 'var(--text-icon)',
+        'syntax-keyword': 'var(--syntax-keyword)',
+        'syntax-string': 'var(--syntax-string)',
+        'syntax-boolean': 'var(--syntax-boolean)',
+        'syntax-property': 'var(--syntax-property)',
+        'syntax-special': 'var(--syntax-special)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
