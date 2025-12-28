@@ -1,6 +1,10 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+// Configure runtime for Vercel
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+
 // Create and configure Nodemailer transporter
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -51,6 +55,18 @@ async function sendEmail(payload, message) {
   }
 };
 
+// Handle OPTIONS request for CORS
+export async function OPTIONS(request) {
+  return new NextResponse(null, {
+    status: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
+    },
+  });
+}
+
 export async function POST(request) {
   try {
     const payload = await request.json();
@@ -61,7 +77,12 @@ export async function POST(request) {
       return NextResponse.json({
         success: false,
         message: 'Email configuration is missing.',
-      }, { status: 500 });
+      }, { 
+        status: 500,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      });
     }
 
     const message = `New message from ${name}\n\nEmail: ${email}\n\nMessage:\n\n${userMessage}\n\n`;
@@ -73,18 +94,33 @@ export async function POST(request) {
       return NextResponse.json({
         success: true,
         message: 'Message sent successfully!',
-      }, { status: 200 });
+      }, { 
+        status: 200,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      });
     }
 
     return NextResponse.json({
       success: false,
       message: 'Failed to send email. Please try again later.',
-    }, { status: 500 });
+    }, { 
+      status: 500,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
+    });
   } catch (error) {
     console.error('API Error:', error.message);
     return NextResponse.json({
       success: false,
       message: 'Server error occurred.',
-    }, { status: 500 });
+    }, { 
+      status: 500,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
+    });
   }
-};
+}
