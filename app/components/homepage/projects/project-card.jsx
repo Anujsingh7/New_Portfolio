@@ -7,8 +7,8 @@ function ProjectCard({ project }) {
   return (
     <div className="relative rounded-lg border border-theme-border bg-theme-card w-full">
       <div className="flex flex-row">
-        <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
-        <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
+        <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-cyan-500 to-cyan-600"></div>
+        <div className="h-[1px] w-full bg-gradient-to-r from-cyan-600 to-transparent"></div>
       </div>
       <div className="px-4 lg:px-8 py-3 lg:py-5 relative">
         <div className="flex flex-row space-x-1 lg:space-x-2 absolute top-1/2 -translate-y-1/2">

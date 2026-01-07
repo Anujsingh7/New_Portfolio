@@ -7,10 +7,10 @@ import { FaCommentAlt } from 'react-icons/fa';
 function BlogCard({ blog }) {
 
   return (
-    <div className="border border-theme-border hover:border-violet-400 transition-all duration-500 bg-theme-card rounded-lg relative group"
+    <div className="border border-theme-border hover:border-cyan-400 transition-all duration-500 bg-theme-card rounded-lg relative group"
     >
       <div className="p-2 sm:p-3 flex flex-col">
-        <div className="flex justify-between items-center text-[#af08ebcf] text-sm">
+        <div className="flex justify-between items-center text-[#0891b2] text-sm">
           <p>{timeConverter(blog.published_at)}</p>
           <div className="flex items-center gap-3">
             <p className="flex items-center gap-1">
@@ -26,11 +26,11 @@ function BlogCard({ blog }) {
           </div>
         </div>
         <Link target='_blank' href={blog.url}>
-          <p className='my-2 lg:my-3 cursor-pointer text-lg text-theme-text sm:text-xl font-medium hover:text-violet-500'>
+          <p className='my-2 lg:my-3 cursor-pointer text-lg text-theme-text sm:text-xl font-medium hover:text-cyan-500'>
             {blog.title}
           </p>
         </Link>
-        <p className='mb-2 text-sm text-[#af08ebcf]'>
+        <p className='mb-2 text-sm text-[#0891b2]'>
           {`${blog.reading_time_minutes} Min Read`}
         </p>
         <p className='text-sm lg:text-base text-theme-text-secondary pb-3 lg:pb-6 line-clamp-3'>
@@ -38,7 +38,7 @@ function BlogCard({ blog }) {
         </p>
         {/* <div className="">
           <Link target='_blank' href={blog.url}>
-            <button className='bg-violet-500 text-white px-3 py-1.5 rounded-full text-xs'>
+            <button className='bg-cyan-500 text-white px-3 py-1.5 rounded-full text-xs'>
               Read More
             </button>
           </Link>

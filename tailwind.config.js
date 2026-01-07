@@ -49,6 +49,26 @@ module.exports = {
       screens: {
         "4k": "1980px",
       },
+      keyframes: {
+        blink: {
+          '0%, 49%': { opacity: '1' },
+          '50%, 100%': { opacity: '0' },
+        },
+        'gradient-xy': {
+          '0%, 100%': {
+            'background-size': '400% 400%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center'
+          }
+        },
+      },
+      animation: {
+        blink: 'blink 1s step-end infinite',
+        'gradient-xy': 'gradient-xy 3s ease infinite',
+      },
     },
   },
   plugins: [],

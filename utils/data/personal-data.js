@@ -13,5 +13,6 @@ export const personalData = {
   stackOverflow: '',
   leetcode: "https://leetcode.com/u/Recession/",
   mediumUsername: "anujsinghpp123",
-  resume: "/Resume.pdf"
+  resume: "/Resume.pdf",
+  gfg: "https://www.geeksforgeeks.org/profile/anujsinghpp123"
 }

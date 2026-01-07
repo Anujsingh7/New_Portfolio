@@ -15,7 +15,7 @@ export default function ThemeToggle() {
 
     if (!mounted) {
         return (
-            <button className="w-10 h-10 rounded-lg flex items-center justify-center bg-violet-600/10">
+            <button className="w-10 h-10 rounded-lg flex items-center justify-center bg-cyan-600/10">
                 <div className="w-5 h-5" />
             </button>
         );
@@ -24,13 +24,13 @@ export default function ThemeToggle() {
     return (
         <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="w-10 h-10 rounded-lg flex items-center justify-center bg-violet-600/10 hover:bg-violet-600/20 transition-all duration-300 group"
+            className="w-10 h-10 rounded-lg flex items-center justify-center bg-cyan-600/10 hover:bg-cyan-600/20 transition-all duration-300 group"
             aria-label="Toggle theme"
         >
             {theme === 'dark' ? (
                 <MdLightMode className="w-5 h-5 text-yellow-400 group-hover:rotate-180 transition-transform duration-500" />
             ) : (
-                <MdDarkMode className="w-5 h-5 text-violet-600 group-hover:rotate-180 transition-transform duration-500" />
+                <MdDarkMode className="w-5 h-5 text-cyan-600 group-hover:rotate-180 transition-transform duration-500" />
             )}
         </button>
     );

@@ -9,7 +9,9 @@ import Projects from "./components/homepage/projects";
 import Skills from "./components/homepage/skills";
 
 async function getData() {
-  const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${personalData.mediumUsername}`)
+  const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${personalData.mediumUsername}`, {
+    next: { revalidate: 60 } // Revalidate every 60 seconds
+  })
 
   if (!res.ok) {
     throw new Error('Failed to fetch data')

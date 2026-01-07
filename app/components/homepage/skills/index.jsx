@@ -32,11 +32,11 @@ function Skills() {
   };
   return (
     <div id="skills" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
-      <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
+      <div className="w-[100px] h-[100px] bg-cyan-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
 
       <div className="flex justify-center -translate-y-[1px]">
         <div className="w-3/4">
-          <div className="h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent  w-full" />
+          <div className="h-[1px] bg-gradient-to-r from-transparent via-cyan-500 to-transparent  w-full" />
         </div>
       </div>
 
@@ -55,7 +55,7 @@ function Skills() {
           {/* Left Arrow */}
           <button
             onClick={() => handleManualScroll('left')}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-violet-500 hover:bg-violet-600 theme-text-accent p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-cyan-500 hover:bg-cyan-600 theme-text-accent p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
             aria-label="Scroll left"
           >
             <BsChevronLeft size={24} />
@@ -78,10 +78,10 @@ function Skills() {
                 return (
                   <div className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
                     key={id}>
-                    <div className="h-full w-full rounded-lg border border-theme-border bg-theme-card shadow-none shadow-gray-50 group-hover:border-violet-500 transition-all duration-500">
+                    <div className="h-full w-full rounded-lg border border-theme-border bg-theme-card shadow-none shadow-gray-50 group-hover:border-cyan-500 transition-all duration-500">
                       <div className="flex -translate-y-[1px] justify-center">
                         <div className="w-3/4">
-                          <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-violet-500 to-transparent" />
+                          <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
                         </div>
                       </div>
                       <div className="flex flex-col items-center justify-center gap-3 p-6">
@@ -108,7 +108,7 @@ function Skills() {
           {/* Right Arrow */}
           <button
             onClick={() => handleManualScroll('right')}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-violet-500 hover:bg-violet-600 theme-text-accent p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-cyan-500 hover:bg-cyan-600 theme-text-accent p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
             aria-label="Scroll right"
           >
             <BsChevronRight size={24} />

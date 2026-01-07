@@ -39,7 +39,7 @@ function Navbar() {
           <div className="flex flex-shrink-0 items-center">
             <Link
               href="/"
-              className="text-hero-primary text-3xl font-bold"
+              className="text-theme-text text-3xl font-bold"
               onClick={closeMenu}
             >
               Anuj Singh
@@ -50,32 +50,32 @@ function Navbar() {
           <ul className="hidden md:flex md:items-center md:space-x-1">
             <li>
               <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#about">
-                <div className="text-sm text-theme-text transition-colors duration-300 hover:text-pink-600">ABOUT</div>
+                <div className="text-sm text-theme-text transition-colors duration-300 hover:text-cyan-500">ABOUT</div>
               </Link>
             </li>
             <li>
               <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#experience">
-                <div className="text-sm text-theme-text transition-colors duration-300 hover:text-pink-600">EXPERIENCE</div>
+                <div className="text-sm text-theme-text transition-colors duration-300 hover:text-cyan-500">EXPERIENCE</div>
               </Link>
             </li>
             <li>
               <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#skills">
-                <div className="text-sm text-theme-text transition-colors duration-300 hover:text-pink-600">SKILLS</div>
+                <div className="text-sm text-theme-text transition-colors duration-300 hover:text-cyan-500">SKILLS</div>
               </Link>
             </li>
             <li>
               <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#education">
-                <div className="text-sm text-theme-text transition-colors duration-300 hover:text-pink-600">EDUCATION</div>
+                <div className="text-sm text-theme-text transition-colors duration-300 hover:text-cyan-500">EDUCATION</div>
               </Link>
             </li>
             <li>
               <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/blog">
-                <div className="text-sm text-theme-text transition-colors duration-300 hover:text-pink-600">BLOGS</div>
+                <div className="text-sm text-theme-text transition-colors duration-300 hover:text-cyan-500">BLOGS</div>
               </Link>
             </li>
             <li>
               <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#projects">
-                <div className="text-sm text-theme-text transition-colors duration-300 hover:text-pink-600">PROJECTS</div>
+                <div className="text-sm text-theme-text transition-colors duration-300 hover:text-cyan-500">PROJECTS</div>
               </Link>
             </li>
             <li className="flex items-center">
@@ -88,7 +88,7 @@ function Navbar() {
             <ThemeToggle />
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-theme-text hover:text-pink-600 focus:outline-none transition-colors duration-300"
+              className="inline-flex items-center justify-center p-2 rounded-md text-theme-text hover:text-cyan-500 focus:outline-none transition-colors duration-300"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (
@@ -114,7 +114,7 @@ function Navbar() {
                 href="/#about"
                 onClick={closeMenu}
               >
-                <div className="text-base text-theme-text transition-colors duration-300 hover:text-pink-600">
+                <div className="text-base text-theme-text transition-colors duration-300 hover:text-cyan-500">
                   ABOUT
                 </div>
               </Link>
@@ -125,7 +125,7 @@ function Navbar() {
                 href="/#experience"
                 onClick={closeMenu}
               >
-                <div className="text-base text-theme-text transition-colors duration-300 hover:text-pink-600">
+                <div className="text-base text-theme-text transition-colors duration-300 hover:text-cyan-500">
                   EXPERIENCE
                 </div>
               </Link>
@@ -136,7 +136,7 @@ function Navbar() {
                 href="/#skills"
                 onClick={closeMenu}
               >
-                <div className="text-base text-theme-text transition-colors duration-300 hover:text-pink-600">
+                <div className="text-base text-theme-text transition-colors duration-300 hover:text-cyan-500">
                   SKILLS
                 </div>
               </Link>
@@ -147,7 +147,7 @@ function Navbar() {
                 href="/#education"
                 onClick={closeMenu}
               >
-                <div className="text-base text-theme-text transition-colors duration-300 hover:text-pink-600">
+                <div className="text-base text-theme-text transition-colors duration-300 hover:text-cyan-500">
                   EDUCATION
                 </div>
               </Link>
@@ -158,7 +158,7 @@ function Navbar() {
                 href="/blog"
                 onClick={closeMenu}
               >
-                <div className="text-base text-theme-text transition-colors duration-300 hover:text-pink-600">
+                <div className="text-base text-theme-text transition-colors duration-300 hover:text-cyan-500">
                   BLOGS
                 </div>
               </Link>
@@ -169,7 +169,7 @@ function Navbar() {
                 href="/#projects"
                 onClick={closeMenu}
               >
-                <div className="text-base text-theme-text transition-colors duration-300 hover:text-pink-600">
+                <div className="text-base text-theme-text transition-colors duration-300 hover:text-cyan-500">
                   PROJECTS
                 </div>
               </Link>
