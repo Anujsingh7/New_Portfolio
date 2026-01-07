@@ -51,6 +51,18 @@ export function AnimatedCode({ code }) {
             <span key={`${lineIndex}-post`} className="text-syntax-keyword">{thisMatch[4]}</span>
           );
         }
+      } else if (line.includes("'") && line.includes('[') && line.includes('skills:')) {
+        // Skills array - split keyword and array
+        const skillsMatch = line.match(/(.*skills:)(.*)/);
+        if (skillsMatch) {
+          parts.push(
+            <span key={`${lineIndex}-keyword`} className="theme-text-muted">{skillsMatch[1]}</span>,
+            <span key={`${lineIndex}-array`} className="text-skills-array">{skillsMatch[2]}</span>
+          );
+        }
+      } else if (line.includes("'") && line.includes('[')) {
+        // Other arrays with strings - controlled by global CSS
+        parts.push(<span key={lineIndex} className="text-skills-array">{line}</span>);
       } else if (line.includes("'")) {
         // String highlighting
         const stringMatch = line.match(/(.*)'([^']*)'(.*)/);

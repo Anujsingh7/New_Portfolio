@@ -26,7 +26,7 @@ function BlogCard({ blog }) {
           </div>
         </div>
         <Link target='_blank' href={blog.url}>
-          <p className='my-2 lg:my-3 cursor-pointer text-lg text-theme-text sm:text-xl font-medium hover:text-cyan-500'>
+          <p className='my-2 lg:my-3 cursor-pointer text-lg text-blog-heading sm:text-xl font-medium hover:text-cyan-500'>
             {blog.title}
           </p>
         </Link>

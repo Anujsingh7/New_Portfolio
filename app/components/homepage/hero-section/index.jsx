@@ -112,7 +112,7 @@ function HeroSection() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex items-center gap-4 flex-wrap">
+          <div className="flex items-center gap-3">
             <Link 
               href="#contact" 
               className="hero-button-primary"
