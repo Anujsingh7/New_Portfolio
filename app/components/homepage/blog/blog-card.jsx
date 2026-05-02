@@ -36,13 +36,13 @@ function BlogCard({ blog }) {
         <p className='text-sm lg:text-base text-theme-text-secondary pb-3 lg:pb-6 line-clamp-3'>
           {blog.description}
         </p>
-        {/* <div className="">
+        <div className="">
           <Link target='_blank' href={blog.url}>
-            <button className='bg-cyan-500 text-white px-3 py-1.5 rounded-full text-xs'>
+            <button className='bg-cyan-500 text-white cursor-pointer  mx-auto my-2 px-4 py-1.5 rounded-full text-xs'>
               Read More
             </button>
           </Link>
-        </div> */}
+        </div>
       </div>
     </div>
   );
