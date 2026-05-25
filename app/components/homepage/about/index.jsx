@@ -34,13 +34,13 @@ function AboutSection() {
           </p>
         </div>
         <div className="flex justify-center items-center order-1 lg:order-2">
-          <div className="w-[320px] h-[320px] rounded-full overflow-hidden flex-shrink-0">
+          <div className="w-[340px] h-[380px] rounded-2xl overflow-hidden flex-shrink-0">
             <Image
               src={personalData.profile}
-              width={320}
-              height={320}
+              width={340}
+              height={380}
               alt="Anuj Singh"
-              className="w-full h-full transition-all duration-1000 hover:scale-110 cursor-pointer object-cover"
+              className="w-full h-full transition-all duration-1000 hover:scale-110 cursor-pointer object-cover object-top"
             />
           </div>
         </div>
