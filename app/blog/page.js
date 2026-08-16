@@ -2,6 +2,8 @@
 
 import { personalData } from "@/utils/data/personal-data";
 import BlogCard from "../components/homepage/blog/blog-card";
+import Link from 'next/link';
+import { FaArrowRight } from 'react-icons/fa';
 
 async function getBlogs() {
   const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${personalData.mediumUsername}`, {
@@ -51,6 +53,20 @@ async function page() {
           ))
         }
       </div>
+
+      {blogs.length >= 10 && (
+        <div className="flex justify-center mt-12">
+          <Link
+            className="button-primary"
+            role="button"
+            href="https://medium.com/@anujsinghpp123"
+            target="_blank"
+          >
+            <span>View Remaining Blogs</span>
+            <FaArrowRight size={16} />
+          </Link>
+        </div>
+      )}
     </div>
   );
 };
